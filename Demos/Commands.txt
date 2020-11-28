@@ -1,0 +1,38 @@
+az login
+
+// https://docs.microsoft.com/en-us/cli/azure/iot/hub?view=azure-cli-latest
+// https://docs.microsoft.com/en-us/cli/azure/ext/azure-cli-iot-ext/iot/device?view=azure-cli-latest
+// https://docs.microsoft.com/en-us/cli/azure/ext/azure-cli-iot-ext/iot/device?view=azure-cli-latest#ext_azure_cli_iot_ext_az_iot_device_simulate
+// https://docs.microsoft.com/en-us/cli/azure/ext/azure-cli-iot-ext/iot/device?view=azure-cli-latest#ext_azure_cli_iot_ext_az_iot_device_send_d2c_message
+
+az iot hub --help
+
+
+
+az iot device simulate -n iot-hub-or-demo01 -d device01
+
+az iot device c2d-message send -d device01 -n iot-hub-or-demo01 --data "hello iot device!!" --props "key0=value0;key1=value1"
+
+az iot device send-d2c-message -n iot-hub-or-demo01 -d device01 --data "'hello IoT Hub 01 !'"
+
+
+// vs code extention -> https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-vscode-iot-toolkit-cloud-device-messaging
+
+
+// setup DevKit
+// https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-arduino-iot-devkit-az3166-get-started
+
+az iot hub device-identity create --hub-name iot-hub-or-demo01 --device-id AzureIoTDevKit01
+// HostName=iot-hub-or-demo01.azure-devices.net;DeviceId=AzureIoTDevKit01;SharedAccessKey=1z8hA38eNHm8YpWkqpvHxvcOQ7m9mcUZcokgQ1KLFrM=
+
+//https://azure.microsoft.com/en-us/features/storage-explorer/
+
+az iot hub monitor-events --hub-name iot-hub-or-demo01 --output table
+
+
+private const string _serviceConnectionString =
+            "HostName=iot-hub-or-demo01.azure-devices.net;SharedAccessKeyName=service;" +
+            "SharedAccessKey=IOZDaEjoUfRwFKL2wZSE3Hh102FryfboYNpiDPys/xM=";
+
+
+
