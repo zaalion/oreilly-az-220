@@ -1,19 +1,23 @@
 az login
 
+// command to simulate a device
 az iot device simulate -n iot-hub-or-demo01 -d device01
 
+// command to send a cloud to device message
 az iot device c2d-message send -d device01 -n iot-hub-or-demo01 --data "hello iot device!!" --props "key0=value0;key1=value1"
 
+// command to send a device to cloud message
 az iot device send-d2c-message -n iot-hub-or-demo01 -d device01 --data "'hello IoT Hub 01 !'"
 
+// command to create a new device identity in IoT Hub
 az iot hub device-identity create --hub-name iot-hub-or-demo01 --device-id AzureIoTDevKit01
 
+// command to see incomming device messages
 az iot hub monitor-events --hub-name iot-hub-or-demo01 --output table
 
-
+// command to create a self-signed x.509 certificate
 dotnet run setup
-dotnet run 0ne001D2220
 
-
-https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-security
+// command to enroll a device to IoT Hub using DPS
+dotnet run 0ne001D2220 
 
