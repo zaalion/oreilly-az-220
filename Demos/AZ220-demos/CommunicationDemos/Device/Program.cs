@@ -2,6 +2,7 @@
 using Microsoft.Azure.Devices.Shared;
 using Newtonsoft.Json;
 using System;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,7 +17,8 @@ namespace Device
         private static TwinCollection _reportedTwinProperties;
 
         private const string _deviceConnectionString =
-            "";
+            "HostName=iot-hub-or-demo01.azure-devices.net;DeviceId=device01;" +
+            "SharedAccessKey=0bCrs6t0ISouwVwxLAoyWj3PaE9AA5ckm/Kasu93zoU=";
 
         static void Main(string[] args)
         {
@@ -34,8 +36,28 @@ namespace Device
 
             //UpdateTwin();
 
+            SendToBlobAsync();
+
             Console.WriteLine("Press a key to terminate the device app...");
             Console.ReadLine();
+        }
+
+        /// <summary>
+        /// https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-csharp-csharp-file-upload
+        /// </summary>
+        private static async void SendToBlobAsync()
+        {
+            string fileName = "image.jpg";
+            Console.WriteLine("Uploading file: {0}", fileName);
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+
+            using (var sourceData = new FileStream(@"D:\Repo\oreilly-az-220\Demos\AZ220-demos\Device\trees.jpg", FileMode.Open))
+            {
+                await _iotDevice.UploadToBlobAsync(fileName, sourceData);
+            }
+
+            watch.Stop();
+            Console.WriteLine("Time to upload file: {0}ms\n", watch.ElapsedMilliseconds);
         }
 
         /// <summary>

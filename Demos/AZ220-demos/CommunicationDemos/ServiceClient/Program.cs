@@ -10,7 +10,8 @@ namespace ServiceClientApp
         private static ServiceClient _iotHubClient;
 
         private const string _serviceConnectionString =
-            "";
+            "HostName=iot-hub-or-demo01.azure-devices.net;SharedAccessKeyName=service;" +
+            "SharedAccessKey=IOZDaEjoUfRwFKL2wZSE3Hh102FryfboYNpiDPys/xM=";
 
         static void Main(string[] args)
         {
@@ -30,8 +31,8 @@ namespace ServiceClientApp
 
             Console.WriteLine("Press a key to terminate the service app ...");
             Console.ReadLine();
-        }    
-        
+        }
+
         /// <summary>
         /// Updates the device desired twin properties. This will trigger a callback in the device app.
         /// </summary>
