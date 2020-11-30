@@ -1,0 +1,9 @@
+SELECT
+    System.Timestamp() AS WindowEnd, AVG(iotInput.humidity)
+INTO
+    BLOBOutput
+FROM
+    iotInput
+WHERE iotInput.humidity IS NOT NULL
+GROUP BY TumblingWindow (second, 5)
+HAVING Avg(iotInput.humidity) > 37
