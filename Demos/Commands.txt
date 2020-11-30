@@ -20,4 +20,3 @@ dotnet run setup
 
 // command to enroll a device to IoT Hub using DPS
 dotnet run 0ne001D2220 
-
