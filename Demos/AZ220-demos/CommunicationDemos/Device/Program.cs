@@ -17,20 +17,20 @@ namespace Device
         private static TwinCollection _reportedTwinProperties;
 
         private const string _deviceConnectionString =
-            "HostName=iot-hub-or-demo01.azure-devices.net;DeviceId=device01;" +
-            "SharedAccessKey=0bCrs6t0ISouwVwxLAoyWj3PaE9AA5ckm/Kasu93zoU=";
+            "HostName=iothub-or-az220.azure-devices.net;DeviceId=iot-device01;" +
+            "SharedAccessKey=EkYzmKb3+JBUlJ3CHdvCZzYPp5BjwlGvxZsaFQ+ocac=";
 
         static void Main(string[] args)
         {
             _reportedTwinProperties = new TwinCollection();
             _iotDevice = DeviceClient.CreateFromConnectionString(_deviceConnectionString);
 
-            _iotDevice.SetDesiredPropertyUpdateCallbackAsync(DesiredTwinUpdatedCallback, null);
+            //_iotDevice.SetDesiredPropertyUpdateCallbackAsync(DesiredTwinUpdatedCallback, null);
 
-            //_iotDevice.OpenAsync();
+            _iotDevice.OpenAsync();
             //_iotDevice.SetMethodHandlerAsync("sayHi", SayHi, null);
 
-            //SendD2CMessage();
+            // SendD2CMessage();
 
             //Receive().Wait();
 
@@ -47,17 +47,18 @@ namespace Device
         /// </summary>
         private static async void SendToBlobAsync()
         {
-            string fileName = "image.jpg";
+            string fileName = "robot.jpg";
             Console.WriteLine("Uploading file: {0}", fileName);
-            var watch = System.Diagnostics.Stopwatch.StartNew();
+            //var watch = System.Diagnostics.Stopwatch.StartNew();
 
-            using (var sourceData = new FileStream(@"D:\Repo\oreilly-az-220\Demos\AZ220-demos\Device\trees.jpg", FileMode.Open))
+            using (var sourceData = new FileStream
+                (@"D:\Repo\oreilly-az-220\Demos\AZ220-demos\Device\robot.jpg", FileMode.Open))
             {
                 await _iotDevice.UploadToBlobAsync(fileName, sourceData);
             }
 
-            watch.Stop();
-            Console.WriteLine("Time to upload file: {0}ms\n", watch.ElapsedMilliseconds);
+            //watch.Stop();
+            //Console.WriteLine("Time to upload file: {0}ms\n", watch.ElapsedMilliseconds);
         }
 
         /// <summary>

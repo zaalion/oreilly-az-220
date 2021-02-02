@@ -1,0 +1,62 @@
+Setting up and Deploying IoT Edge Devices
+=========================================
+
+Exam AZ-220: Microsoft Azure IoT Developer
+------------------------------------------
+https://docs.microsoft.com/en-us/learn/certifications/exams/az-220
+
+Exam AZ-220: Microsoft Azure IoT Developer – Skills Measured
+------------------------------------------------------------
+https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4nBeC
+
+Understand the Azure IoT Edge runtime and its architecture
+----------------------------------------------------------
+https://docs.microsoft.com/en-us/azure/iot-edge/iot-edge-runtime
+
+Install or uninstall the Azure IoT Edge runtime
+-----------------------------------------------
+https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge?view=iotedge-2018-06&tabs=linux
+
+Create a deployment manifest
+----------------------------
+https://docs.microsoft.com/en-us/azure/iot-edge/module-composition?view=iotedge-2018-06#create-a-deployment-manifest
+
+Declare routes
+--------------
+https://docs.microsoft.com/en-us/azure/iot-edge/module-composition?view=iotedge-2018-06#declare-routes
+
+Quickstart: Deploy your first IoT Edge module to a virtual Windows device
+-------------------------------------------------------------------------
+https://docs.microsoft.com/en-us/azure/iot-edge/quickstart?view=iotedge-2018-06#install-and-start-the-iot-edge-runtime
+
+azure-cli-iot-ext
+-----------------
+https://docs.microsoft.com/en-us/cli/azure/ext/azure-cli-iot-ext/iot/hub/device-identity?view=azure-cli-latest
+
+Understand the identity registry in your IoT hub
+------------------------------------------------
+https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-devguide-identity-registry
+
+Devices - Create Or Update Identity
+-----------------------------------
+https://docs.microsoft.com/en-us/rest/api/iothub/service/devices/createorupdateidentity
+
+Set up an Azure IoT Edge device with symmetric key authentication
+-----------------------------------------------------------------
+https://docs.microsoft.com/en-us/azure/iot-edge/how-to-manual-provision-symmetric-key?view=iotedge-2018-06&tabs=azure-portal%2Cwindows
+
+Deploy Azure IoT Edge modules from the Azure portal
+---------------------------------------------------
+https://docs.microsoft.com/en-us/azure/iot-edge/how-to-deploy-modules-portal?view=iotedge-2018-06
+
+Understand the Azure IoT Edge runtime and its architecture
+----------------------------------------------------------
+https://docs.microsoft.com/en-us/azure/iot-edge/iot-edge-runtime?view=iotedge-2018-06
+
+Prepare to deploy your IoT Edge solution in production
+------------------------------------------------------
+https://docs.microsoft.com/en-us/azure/iot-edge/production-checklist?view=iotedge-2018-06
+
+Tutorial: Develop a C# IoT Edge module for Windows devices
+----------------------------------------------------------
+https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-csharp-module-windows?view=iotedge-2018-06

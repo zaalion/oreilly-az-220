@@ -1,0 +1,35 @@
+Developing IoT Edge Modules
+===========================
+
+Exam AZ-220: Microsoft Azure IoT Developer
+------------------------------------------
+https://docs.microsoft.com/en-us/learn/certifications/exams/az-220
+
+Exam AZ-220: Microsoft Azure IoT Developer – Skills Measured
+------------------------------------------------------------
+https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4nBeC
+
+https://docs.microsoft.com/en-us/azure/iot-edge/development-environment
+https://docs.microsoft.com/en-us/azure/iot-edge/support?view=iotedge-2018-06
+https://marketplace.visualstudio.com/items?itemName=vsc-iot.vs16iotedgetools
+https://docs.microsoft.com/en-us/azure/iot-edge/development-environment?view=iotedge-2018-06#iot-edge-dev-tool
+https://pypi.org/project/iotedgehubdev/
+https://docs.microsoft.com/en-us/azure/iot-edge/module-development?view=iotedge-2018-06
+https://docs.microsoft.com/en-us/azure/iot-edge/how-to-use-create-options?view=iotedge-2018-06
+https://docs.microsoft.com/en-us/azure/iot-edge/iot-edge-runtime?view=iotedge-2018-06#connecting-to-the-iot-edge-hub
+https://docs.microsoft.com/en-us/dotnet/api/microsoft.azure.devices.client.moduleclient?view=azure-dotnet
+https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-develop-for-windows?view=iotedge-2018-06
+https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-csharp-module-windows?view=iotedge-2018-06
+https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-deploy-custom-vision?view=iotedge-2018-06
+https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-store-data-sql-server?view=iotedge-2018-06
+https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-deploy-function?view=iotedge-2018-06
+https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-deploy-stream-analytics?view=iotedge-2018-06
+https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-deploy-machine-learning?view=iotedge-2018-06
+https://docs.microsoft.com/en-us/azure/iot-edge/how-to-deploy-blob?view=iotedge-2018-06
+https://docs.microsoft.com/en-us/azure/iot-edge/how-to-deploy-modules-portal?view=iotedge-2018-06
+https://docs.microsoft.com/en-us/azure/iot-edge/module-composition?view=iotedge-2018-06
+https://docs.microsoft.com/en-us/azure/iot-edge/module-deployment-monitoring?view=iotedge-2018-06
+https://docs.microsoft.com/en-us/azure/iot-edge/how-to-continuous-integration-continuous-deployment?view=iotedge-2018-06
+https://docs.microsoft.com/en-us/azure/iot-edge/how-to-devops-starter?view=iotedge-2018-06
+https://github.com/toolboc/IoTEdge-DevOps
+https://plugins.jenkins.io/azure-iot-edge/

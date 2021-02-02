@@ -10,17 +10,17 @@ namespace ServiceClientApp
         private static ServiceClient _iotHubClient;
 
         private const string _serviceConnectionString =
-            "HostName=iot-hub-or-demo01.azure-devices.net;SharedAccessKeyName=service;" +
-            "SharedAccessKey=IOZDaEjoUfRwFKL2wZSE3Hh102FryfboYNpiDPys/xM=";
+            "HostName=iothub-or-az220.azure-devices.net;SharedAccessKeyName=service;" +
+            "SharedAccessKey=0A3WyzDL5pJ4Vn9OqceHy2qDvXs9D1a2bIL8AgYeOME=";
 
         static void Main(string[] args)
         {
             _iotHubClient = ServiceClient.CreateFromConnectionString(_serviceConnectionString);
 
-            Console.WriteLine("Press a key to start the service app ...");
-            Console.ReadLine();
+            //Console.WriteLine("Press a key to start the service app ...");
+            //Console.ReadLine();
 
-            //SendC2DMessage();
+            SendC2DMessage();
 
             //CallDirectMethod();
 
@@ -70,7 +70,7 @@ namespace ServiceClientApp
                 MessageId = Guid.NewGuid().ToString()
             };
 
-            _iotHubClient.SendAsync("device01", commandMessage).Wait();
+            _iotHubClient.SendAsync("iot-device01", commandMessage).Wait();
         }
     }
 }

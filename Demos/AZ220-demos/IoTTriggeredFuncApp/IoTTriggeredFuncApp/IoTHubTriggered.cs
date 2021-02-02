@@ -18,9 +18,11 @@ namespace IoTTriggeredFuncApp
         /// <param name="message"></param>
         /// <param name="log"></param>
         [FunctionName("IoTHubTriggered")]
-        public static void Run([IoTHubTrigger("messages/events", Connection = "IotHubConnection")]EventData message, ILogger log)
+        public static void Run([IoTHubTrigger("messages/events", 
+            Connection = "IotHubConnection")]EventData message, ILogger log)
         {
-            log.LogInformation($"C# IoT Hub trigger function processed a message: {Encoding.UTF8.GetString(message.Body.Array)}");
+            log.LogInformation($"C# IoT Hub trigger function processed a message: " +
+                $"{Encoding.UTF8.GetString(message.Body.Array)}");
         }
     }
 }
